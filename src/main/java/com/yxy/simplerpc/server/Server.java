@@ -5,7 +5,7 @@ public interface Server {
 
     public void start();
 
-    public void register();
+    public void register(Class classInterface,Class classImpl);
 
     public boolean isRunning();
 
