@@ -1,5 +1,7 @@
 package com.yxy.simplerpc.server;
 
+import java.net.InetSocketAddress;
+
 public interface Server {
     public void stop();
 
@@ -9,6 +11,8 @@ public interface Server {
 
     public boolean isRunning();
 
-    public int getPort();
+    public InetSocketAddress getHostAddress();
+
+    public InetSocketAddress getCenterAddress();
 
 }

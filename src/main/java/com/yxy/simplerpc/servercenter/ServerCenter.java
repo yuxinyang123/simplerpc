@@ -1,7 +1,21 @@
 package com.yxy.simplerpc.servercenter;
 
-public interface ServerCenter {
-    public void register(Class classInterface, Class classImpl);
+import java.net.InetSocketAddress;
 
-    public void logout();
+public interface ServerCenter {
+    public void start();
+
+    public void stop();
+
+    public void registry(InetSocketAddress registryAddress,Class classInterface, Class classImpl);
+
+    public void remove(InetSocketAddress registryAddress,Class classInterface, Class classImpl);
+
+    public void listenClient(InetSocketAddress clientAddress);
+
+    public void listenRegistry(InetSocketAddress registryAddress);
+
+    public void listenLogout(InetSocketAddress logoutAddress);
+
+    public void isRunning();
 }
